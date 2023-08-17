@@ -15,7 +15,7 @@
 <title>Paciente</title>
 
 </head>
-<body>
+<body style = background-color:#74ADA2>
 	<section>
 		<div class="container">
 			<h1>Detalle Paciente</h1>

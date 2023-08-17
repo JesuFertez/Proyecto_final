@@ -14,10 +14,10 @@
 
 <title>Pacientes</title>
 </head>
-<body>
+<body style = background-color:#74ADA2>
 	<section>
-		<div class="container" style="text-align: center">
-			<h1>Listado de Pacientes</h1>
+		<div class="container mt-5" style="text-align: center">
+			<h1 class="mb-5">Listado de Pacientes</h1>
 			<table class="table table-striped table-bordered">
 				<thead class="table-dark">
 					<tr>
