@@ -16,7 +16,7 @@ public class DoctorEntity {
 	@Column(name="Nombre")
 	private String nombre;
 	@JoinColumn(name="Especialidad_ID", referencedColumnName="ID")
-	private Especialidad especialidad;
+	private int especialidad;
 	@Column(name="Experiencia")
 	private int experiencia;
 	
@@ -24,7 +24,7 @@ public class DoctorEntity {
 		super();
 	}
 
-	public DoctorEntity(int id, String nombre, Especialidad especialidad, int experiencia) {
+	public DoctorEntity(int id, String nombre, int especialidad, int experiencia) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -32,7 +32,7 @@ public class DoctorEntity {
 		this.experiencia = experiencia;
 	}
 
-	public DoctorEntity(String nombre, Especialidad especialidad, int experiencia) {
+	public DoctorEntity(String nombre, int especialidad, int experiencia) {
 		super();
 		this.nombre = nombre;
 		this.especialidad = especialidad;
@@ -55,11 +55,11 @@ public class DoctorEntity {
 		this.nombre = nombre;
 	}
 
-	public Especialidad getEspecialidad() {
+	public int getEspecialidad() {
 		return especialidad;
 	}
 
-	public void setEspecialidad(Especialidad especialidad) {
+	public void setEspecialidad(int especialidad) {
 		this.especialidad = especialidad;
 	}
 

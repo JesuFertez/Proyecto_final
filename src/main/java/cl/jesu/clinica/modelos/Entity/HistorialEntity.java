@@ -16,9 +16,9 @@ public class HistorialEntity {
 	@Column(name="ID")
 	private int id;
 	@JoinColumn(name="Paciente_ID", referencedColumnName="ID")
-	private PacienteEntity paciente;
+	private int paciente;
 	@JoinColumn(name="Doctor_ID", referencedColumnName="ID")
-	private DoctorEntity doctor;
+	private int doctor;
 	@Column(name="Fecha_Cita")
 	private LocalDateTime fechaCita;
 	@Column(name="Sintomas")
@@ -32,7 +32,7 @@ public class HistorialEntity {
 		super();
 	}
 
-	public HistorialEntity(int id, PacienteEntity paciente, DoctorEntity doctor, LocalDateTime fechaCita,
+	public HistorialEntity(int id, int paciente, int doctor, LocalDateTime fechaCita,
 			String sintomas, String diagnostico, String tratamiento) {
 		super();
 		this.id = id;
@@ -44,7 +44,7 @@ public class HistorialEntity {
 		this.tratamiento = tratamiento;
 	}
 
-	public HistorialEntity(PacienteEntity paciente, DoctorEntity doctor, LocalDateTime fechaCita, String sintomas,
+	public HistorialEntity(int paciente, int doctor, LocalDateTime fechaCita, String sintomas,
 			String diagnostico, String tratamiento) {
 		super();
 		this.paciente = paciente;
@@ -63,19 +63,19 @@ public class HistorialEntity {
 		this.id = id;
 	}
 
-	public PacienteEntity getPaciente() {
+	public int getPaciente() {
 		return paciente;
 	}
 
-	public void setPaciente(PacienteEntity paciente) {
+	public void setPaciente(int paciente) {
 		this.paciente = paciente;
 	}
 
-	public DoctorEntity getDoctor() {
+	public int getDoctor() {
 		return doctor;
 	}
 
-	public void setDoctor(DoctorEntity doctor) {
+	public void setDoctor(int doctor) {
 		this.doctor = doctor;
 	}
 

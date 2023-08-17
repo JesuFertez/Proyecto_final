@@ -16,32 +16,32 @@ public class CitasEntity {
 	@Column(name="ID")
 	private int id;
 	@JoinColumn(name="Paciente_ID", referencedColumnName="ID")
-	private PacienteEntity pacienteId;
+	private int pacienteId;
 	@JoinColumn(name="Doctor_ID", referencedColumnName="ID")
-	private DoctorEntity doctorId;
+	private int doctor_id;
 	@Column(name="Fecha")
 	private LocalDateTime fecha;
 	@JoinColumn(name="Factura_ID", referencedColumnName="ID")
-	private FacturaEntity facturaId;
+	private int facturaId;
 	
 	public CitasEntity() {
 		super();
 	}
 
-	public CitasEntity(int id, PacienteEntity pacienteId, DoctorEntity doctorId, LocalDateTime fecha,
-			FacturaEntity facturaId) {
+	public CitasEntity(int id, int pacienteId, int doctorId, LocalDateTime fecha,
+			int facturaId) {
 		super();
 		this.id = id;
 		this.pacienteId = pacienteId;
-		this.doctorId = doctorId;
+		this.doctor_id = doctorId;
 		this.fecha = fecha;
 		this.facturaId = facturaId;
 	}
 
-	public CitasEntity(PacienteEntity pacienteId, DoctorEntity doctorId, LocalDateTime fecha, FacturaEntity facturaId) {
+	public CitasEntity(int pacienteId, int doctorId, LocalDateTime fecha, int facturaId) {
 		super();
 		this.pacienteId = pacienteId;
-		this.doctorId = doctorId;
+		this.doctor_id = doctorId;
 		this.fecha = fecha;
 		this.facturaId = facturaId;
 	}
@@ -54,20 +54,20 @@ public class CitasEntity {
 		this.id = id;
 	}
 
-	public PacienteEntity getPacienteId() {
+	public int getPacienteId() {
 		return pacienteId;
 	}
 
-	public void setPacienteId(PacienteEntity pacienteId) {
+	public void setPacienteId(int pacienteId) {
 		this.pacienteId = pacienteId;
 	}
 
-	public DoctorEntity getDoctorId() {
-		return doctorId;
+	public int getDoctorId() {
+		return doctor_id;
 	}
 
-	public void setDoctorId(DoctorEntity doctorId) {
-		this.doctorId = doctorId;
+	public void setDoctorId(int doctorId) {
+		this.doctor_id = doctorId;
 	}
 
 	public LocalDateTime getFecha() {
@@ -78,11 +78,11 @@ public class CitasEntity {
 		this.fecha = fecha;
 	}
 
-	public FacturaEntity getFacturaId() {
+	public int getFacturaId() {
 		return facturaId;
 	}
 
-	public void setFacturaId(FacturaEntity facturaId) {
+	public void setFacturaId(int facturaId) {
 		this.facturaId = facturaId;
 	}
 	
