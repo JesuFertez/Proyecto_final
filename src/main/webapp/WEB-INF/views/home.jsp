@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Título de la página -->
-        <title>Hola mundo!</title>
+        <title>Bienvenidos</title>
 
         <!-- Hojas de Estilo -->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/estilo.css">

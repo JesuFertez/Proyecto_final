@@ -37,7 +37,7 @@
 							<td><c:out value="${pac.nombre}"></c:out></td>
 							<td><c:out value="${pac.fechaNacimiento}"></c:out></td>
 							<td>
-								<form action="Editar" method="POST">
+								<form>
 									<input type="hidden" name="id_paciente" value="${pac.id}">
 									<button type="submit" class="btn btn-outline-dark btn-sm">
 										<i class="bi bi-pencil-square"></i>Editar
