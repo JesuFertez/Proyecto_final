@@ -11,17 +11,26 @@ public class Especialidad {
 	
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_especialidad;
 	@Column(name="Nombre")
 	private String nombre;
 	
 	public Especialidad() {
 		super();
 	}
+	
+	
+
+	public Especialidad(int id) {
+		super();
+		this.id_especialidad = id;
+	}
+
+
 
 	public Especialidad(int id, String nombre) {
 		super();
-		this.id = id;
+		this.id_especialidad = id;
 		this.nombre = nombre;
 	}
 

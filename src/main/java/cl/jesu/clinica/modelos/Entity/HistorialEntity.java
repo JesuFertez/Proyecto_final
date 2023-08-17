@@ -14,11 +14,11 @@ public class HistorialEntity {
 	
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_historial;
 	@JoinColumn(name="Paciente_ID", referencedColumnName="ID")
-	private int paciente;
+	private int Paciente_ID;
 	@JoinColumn(name="Doctor_ID", referencedColumnName="ID")
-	private int doctor;
+	private int Doctor_ID ;
 	@Column(name="Fecha_Cita")
 	private LocalDateTime fechaCita;
 	@Column(name="Sintomas")
@@ -31,24 +31,31 @@ public class HistorialEntity {
 	public HistorialEntity() {
 		super();
 	}
+	
+	
+	public HistorialEntity(int id) {
+		super();
+		this.id_historial = id;
+	}
 
-	public HistorialEntity(int id, int paciente, int doctor, LocalDateTime fechaCita,
+
+	public HistorialEntity(int id, int Paciente_ID, int doctor, LocalDateTime fechaCita,
 			String sintomas, String diagnostico, String tratamiento) {
 		super();
-		this.id = id;
-		this.paciente = paciente;
-		this.doctor = doctor;
+		this.id_historial = id;
+		this.Paciente_ID = Paciente_ID;
+		this.Doctor_ID = doctor;
 		this.fechaCita = fechaCita;
 		this.sintomas = sintomas;
 		this.diagnostico = diagnostico;
 		this.tratamiento = tratamiento;
 	}
 
-	public HistorialEntity(int paciente, int doctor, LocalDateTime fechaCita, String sintomas,
+	public HistorialEntity(int Paciente_ID, int doctor, LocalDateTime fechaCita, String sintomas,
 			String diagnostico, String tratamiento) {
 		super();
-		this.paciente = paciente;
-		this.doctor = doctor;
+		this.Paciente_ID = Paciente_ID;
+		this.Doctor_ID = doctor;
 		this.fechaCita = fechaCita;
 		this.sintomas = sintomas;
 		this.diagnostico = diagnostico;
@@ -56,27 +63,27 @@ public class HistorialEntity {
 	}
 
 	public int getId() {
-		return id;
+		return id_historial;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_historial = id;
 	}
 
 	public int getPaciente() {
-		return paciente;
+		return Paciente_ID;
 	}
 
-	public void setPaciente(int paciente) {
-		this.paciente = paciente;
+	public void setPaciente(int Paciente_ID) {
+		this.Paciente_ID = Paciente_ID;
 	}
 
 	public int getDoctor() {
-		return doctor;
+		return Doctor_ID;
 	}
 
 	public void setDoctor(int doctor) {
-		this.doctor = doctor;
+		this.Doctor_ID = doctor;
 	}
 
 	public LocalDateTime getFechaCita() {

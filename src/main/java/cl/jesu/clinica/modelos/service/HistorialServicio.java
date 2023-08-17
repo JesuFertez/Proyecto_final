@@ -1,6 +1,7 @@
 package cl.jesu.clinica.modelos.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,10 @@ public class HistorialServicio {
 		return(ArrayList<HistorialEntity>) hiRepo.findAll();
 	}
 	
+	public List<HistorialEntity>finHistorialPaciente(int id){
+		return hiRepo.findHistorialPaciente(id);
+	}
+	
 	public HistorialEntity obtenerHistorial(int id) {
 	return hiRepo.findById(id).get();
 	}
@@ -37,4 +42,6 @@ public class HistorialServicio {
 	public void borrarHistorial(int id) {
 		hiRepo.delete(hiRepo.getOne(id));
 	}
+	
+
 }

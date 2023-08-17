@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html>
     <!-- Cabecera -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+    	<%@ include file='navbar.jsp'%>
     <head>
         <!-- Cofigicación de caracteres -->
         <meta charset="UTF-8">
@@ -21,10 +24,9 @@
 
     <!-- Cuerpo -->
     <body>
-        <h1>Hola mundo!</h1>
-        <p>
-            Bienenidos sean todos!
-        </p>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        
     </body>
     <!-- /Cuerpo -->
 </html>

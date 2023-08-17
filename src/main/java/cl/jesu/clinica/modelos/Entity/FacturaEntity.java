@@ -13,7 +13,7 @@ public class FacturaEntity {
 
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_factura;
 	@Column(name="Monto")
 	private float monto;
 	@Column(name="Fecha_Pago")
@@ -22,6 +22,13 @@ public class FacturaEntity {
 	public FacturaEntity() {
 		super();
 	}
+	
+
+	public FacturaEntity(int id) {
+		super();
+		this.id_factura = id;
+	}
+
 
 	public FacturaEntity(float monto, LocalDateTime fechaPago) {
 		super();
@@ -31,17 +38,17 @@ public class FacturaEntity {
 
 	public FacturaEntity(int id, float monto, LocalDateTime fechaPago) {
 		super();
-		this.id = id;
+		this.id_factura = id;
 		this.monto = monto;
 		this.fechaPago = fechaPago;
 	}
 
 	public int getId() {
-		return id;
+		return id_factura;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_factura = id;
 	}
 
 	public float getMonto() {

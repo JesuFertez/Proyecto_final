@@ -12,7 +12,7 @@ public class DoctorEntity {
 
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_doctor;
 	@Column(name="Nombre")
 	private String nombre;
 	@JoinColumn(name="Especialidad_ID", referencedColumnName="ID")
@@ -23,10 +23,16 @@ public class DoctorEntity {
 	public DoctorEntity() {
 		super();
 	}
+	
+	public DoctorEntity(int id) {
+		super();
+		this.id_doctor = id;
+	}
+
 
 	public DoctorEntity(int id, String nombre, int especialidad, int experiencia) {
 		super();
-		this.id = id;
+		this.id_doctor = id;
 		this.nombre = nombre;
 		this.especialidad = especialidad;
 		this.experiencia = experiencia;
@@ -40,11 +46,11 @@ public class DoctorEntity {
 	}
 
 	public int getId() {
-		return id;
+		return id_doctor;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_doctor = id;
 	}
 
 	public String getNombre() {

@@ -1,4 +1,5 @@
-package cl.jesu.clinica.modelos;
+package cl.jesu.clinica.modelos.service;
+
 
 import java.time.LocalDateTime;
 

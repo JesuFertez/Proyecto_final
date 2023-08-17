@@ -14,7 +14,7 @@ public class CitasEntity {
 
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_cita;
 	@JoinColumn(name="Paciente_ID", referencedColumnName="ID")
 	private int pacienteId;
 	@JoinColumn(name="Doctor_ID", referencedColumnName="ID")
@@ -28,10 +28,15 @@ public class CitasEntity {
 		super();
 	}
 
+	public CitasEntity(int id) {
+		super();
+		this.id_cita = id;
+	}
+
 	public CitasEntity(int id, int pacienteId, int doctorId, LocalDateTime fecha,
 			int facturaId) {
 		super();
-		this.id = id;
+		this.id_cita = id;
 		this.pacienteId = pacienteId;
 		this.doctor_id = doctorId;
 		this.fecha = fecha;
@@ -47,11 +52,11 @@ public class CitasEntity {
 	}
 
 	public int getId() {
-		return id;
+		return id_cita;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_cita = id;
 	}
 
 	public int getPacienteId() {

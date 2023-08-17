@@ -14,24 +14,7 @@ import org.springframework.ui.Model;
 @RequestMapping(path = "/")
 public class HomeController {
 
-    // Constantes
-    // -----------------------------------------------------------------------------------------
-
-    /** Objeto {@link Logger} que contiene los métodos de depuración */
-
-    // Solicitudes GET
-    // -----------------------------------------------------------------------------------------
-
-    /**
-     * Muestra la Página de Inicio
-     *
-     * @param nombre  nombre de la persona (opcional)
-     * @param request objeto {@link HttpServletRequest} que contiene la información
-     *                de la solicitud que le hace el cliente al {@link HttpServlet}
-     * @param modelo  objeto {@link Model} con el modelo de la vista
-     *
-     * @return un objeto {@link String} con la respuesta a la solicitud
-     */
+   
     @GetMapping(path = { "/", "/{nombre}" })
     public String paginaInicio(@PathVariable Optional<String> nombre, HttpServletRequest request, Model modelo) {
         // Depuración

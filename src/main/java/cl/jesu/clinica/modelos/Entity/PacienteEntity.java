@@ -13,7 +13,7 @@ public class PacienteEntity {
 	
 	@Id
 	@Column(name="ID")
-	private int id;
+	private int id_paciente;
 	@Column(name="Nombre")
 	private String nombre;
 	@Column(name="Fecha_Nacimiento")
@@ -23,9 +23,14 @@ public class PacienteEntity {
 		super();
 	}
 
+	public PacienteEntity(int id) {
+		super();
+		this.id_paciente = id;
+	}
+
 	public PacienteEntity(int id, String nombre, LocalDateTime fechaNacimiento) {
 		super();
-		this.id = id;
+		this.id_paciente = id;
 		this.nombre = nombre;
 		this.fechaNacimiento = fechaNacimiento;
 	}
@@ -37,11 +42,11 @@ public class PacienteEntity {
 	}
 
 	public int getId() {
-		return id;
+		return id_paciente;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.id_paciente = id;
 	}
 
 	public String getNombre() {
